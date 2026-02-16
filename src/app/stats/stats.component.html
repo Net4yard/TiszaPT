@@ -1,1 +1,38 @@
-<p>stats works!</p>
+<section class="stats-page" aria-label="Program célok statisztikája">
+	<h1>Programkövető statisztika</h1>
+
+	<div class="counter-card">
+		<p>Teljesülés</p>
+		<strong>{{ completedGoals }} / {{ totalGoals }}</strong>
+	</div>
+
+	<div class="goal-groups">
+		<section class="group" *ngFor="let group of groups">
+			<h2>{{ group.title }}</h2>
+
+			<div class="sections">
+				<section class="subsection" *ngFor="let section of group.sections">
+					<h3>{{ section.title }}</h3>
+					<p class="source">Forrás: {{ section.page }}. oldal</p>
+
+					<ul>
+						<li *ngFor="let goal of section.goals" [class.done]="goal.completed">
+							<span class="checkbox" aria-hidden="true" [class.checked]="goal.completed">
+								{{ goal.completed ? '✓' : '' }}
+							</span>
+							<span class="goal-text">{{ goal.title }}</span>
+						</li>
+					</ul>
+				</section>
+			</div>
+		</section>
+	</div>
+
+	<section class="notes-block" aria-label="Fejlesztési megjegyzések">
+		<h2>Fejlesztési napló</h2>
+		<textarea
+			rows="8"
+			placeholder="Ide írhatod manuálisan, hogy hol milyen fejlesztéseket teljesítettek..."
+		></textarea>
+	</section>
+</section>
