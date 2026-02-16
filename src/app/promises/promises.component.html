@@ -1,1 +1,21 @@
-<p>promises works!</p>
+<section class="program-page" aria-label="TISZA program témák">
+	<h1>Program és vállalások</h1>
+	<p class="lead">
+		A teljes program PDF tartalomjegyzéke alapján 4 fő témába rendezve láthatók az egyes célok.
+	</p>
+
+	<div class="themes">
+		<details class="theme" *ngFor="let theme of themes; let index = index" [attr.open]="index === 0 ? '' : null">
+			<summary>{{ theme.title }}</summary>
+			<div class="subsections">
+				<details class="subsection" *ngFor="let section of theme.sections">
+					<summary>{{ section.title }}</summary>
+					<ul>
+						<li *ngFor="let promise of section.promises">{{ promise }}</li>
+					</ul>
+					<p class="source" *ngIf="section.page">Forrás: {{ section.page }}. oldal</p>
+				</details>
+			</div>
+		</details>
+	</div>
+</section>

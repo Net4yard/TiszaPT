@@ -1,1 +1,28 @@
-<p>election works!</p>
+<section class="election-countdown" aria-label="Választási visszaszámláló">
+	<p class="intro">Visszaszámlálás a választásokig</p>
+	<h1 class="title">2026. április 12. 06:00</h1>
+
+	<div class="timer" role="timer" aria-live="polite">
+		<div class="time-block">
+			<span class="value">{{ days }}</span>
+			<span class="label">nap</span>
+		</div>
+		<div class="separator">:</div>
+		<div class="time-block">
+			<span class="value">{{ formatUnit(hours) }}</span>
+			<span class="label">óra</span>
+		</div>
+		<div class="separator">:</div>
+		<div class="time-block">
+			<span class="value">{{ formatUnit(minutes) }}</span>
+			<span class="label">perc</span>
+		</div>
+		<div class="separator">:</div>
+		<div class="time-block">
+			<span class="value">{{ formatUnit(seconds) }}</span>
+			<span class="label">másodperc</span>
+		</div>
+	</div>
+
+	<p class="status">{{ isStarted ? 'A választás elkezdődött.' : '' }}</p>
+</section>

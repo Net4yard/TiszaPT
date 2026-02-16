@@ -1,0 +1,92 @@
+:host {
+	display: block;
+	background: #080c21;
+	color: #ffffff;
+	min-height: calc(100vh - 80px);
+}
+
+.election-countdown {
+	min-height: calc(100vh - 80px);
+	display: grid;
+	place-content: center;
+	justify-items: center;
+	gap: 1rem;
+	padding: 2rem 1rem 3rem;
+	text-align: center;
+}
+
+.intro {
+	margin: 0;
+	font-size: 1rem;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	color: rgba(255, 255, 255, 0.72);
+}
+
+.title {
+	margin: 0;
+	font-size: clamp(1.1rem, 2.2vw, 1.6rem);
+	font-weight: 700;
+	letter-spacing: 0.04em;
+}
+
+.timer {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	gap: clamp(0.4rem, 1.4vw, 1rem);
+	margin-top: 0.8rem;
+	flex-wrap: wrap;
+}
+
+.time-block {
+	display: grid;
+	gap: 0.5rem;
+	justify-items: center;
+	min-width: clamp(72px, 12vw, 170px);
+}
+
+.value {
+	font-size: clamp(2.2rem, 9vw, 8rem);
+	font-weight: 700;
+	line-height: 0.95;
+	letter-spacing: 0.02em;
+	font-variant-numeric: tabular-nums;
+	text-shadow: 0 0 28px rgba(136, 232, 255, 0.22);
+}
+
+.label {
+	font-size: clamp(0.68rem, 1.4vw, 0.96rem);
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	color: rgba(255, 255, 255, 0.76);
+}
+
+.separator {
+	font-size: clamp(1.8rem, 6vw, 4rem);
+	line-height: 1;
+	font-weight: 700;
+	padding-top: clamp(0.2rem, 1.3vw, 1.1rem);
+	color: #88e8ff;
+}
+
+.status {
+	margin: 0.65rem 0 0;
+	font-size: 1rem;
+	font-weight: 600;
+	color: #88e8ff;
+}
+
+@media (max-width: 720px) {
+	.election-countdown {
+		padding-top: 2.5rem;
+	}
+
+	.timer {
+		row-gap: 0.7rem;
+	}
+
+	.separator {
+		display: none;
+	}
+}
