@@ -24,15 +24,16 @@
 	flex: none;
 	place-content: center space-between;
 	align-items: center;
-	width: 100%;
+	width: 97%;
 	height: 80px;
 	display: flex;
+	margin: 0 auto;
 }
 
 .brand {
 	display: inline-flex;
 	align-items: center;
-	gap: 0.55rem;
+	gap: 1rem;
 	text-decoration: none;
 	color: var(--token-d4cf763d-2571-443d-9036-9aeef88bd3d3);
 	font-weight: 700;

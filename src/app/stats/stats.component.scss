@@ -16,6 +16,15 @@ h1 {
 	color: #080c21;
 }
 
+.lead {
+	margin: 1rem auto 1.8rem;
+	max-width: 850px;
+	font-size: clamp(1rem, 1.8vw, 1.2rem);
+	line-height: 1.6;
+	text-align: center;
+	color: rgba(8, 12, 33, 0.82);
+}
+
 .counter-card {
 	margin: 1.2rem auto 1.8rem;
 	width: fit-content;
